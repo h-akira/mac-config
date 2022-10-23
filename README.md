@@ -1,6 +1,17 @@
 # mac-config
-Macの設定ファイル．
+Macのconfig．
+```
+cd ~/.config
+git init
+git remote add origin git@github.com:h-akira/mac-config.git
+git pull origin main
+```
 ## yabai
-[github](https://github.com/koekeishiya/yabai)
+タイル型ウィンドウマネージャー．下記のskhdと組み合わせて使う．
+- [github](https://github.com/koekeishiya/yabai)
+```
+ brew install spaceman
+```
 ## skhd
-[github](https://github.com/koekeishiya/skhd)
+ショートカットバインドツール．
+- [github](https://github.com/koekeishiya/skhd)

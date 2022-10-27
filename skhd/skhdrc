@@ -109,46 +109,32 @@ alt - right   : yabai -m window --grid 1:2:1:1:0:0
 
 # create and deleat desktop
 shift + alt - c : yabai -m space --create
-shift + alt - d : yabai -m space --destroy
+shift + alt - d : sh ${HOME}/.config/skhd/destroy.sh
 
 # fast focus desktop
-alt - z : yabai -m space --focus recent
-alt - 1 : yabai -m space --focus first
-alt - 2 : yabai -m space --focus 2 || if [ "$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[-1].index')" -ne "2" ]; \
-then { yabai -m space --create; } && {yabai -m space --focus last; } fi
-alt - 3 : yabai -m space --focus 3 || if [ "$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[-1].index')" -ne "3" ]; \
-then { yabai -m space --create; } && {yabai -m space --focus last; } fi
-alt - 4 : yabai -m space --focus 4 || if [ "$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[-1].index')" -ne "4" ]; \
-then { yabai -m space --create; } && {yabai -m space --focus last; } fi
-alt - 5 : yabai -m space --focus 5 || if [ "$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[-1].index')" -ne "5" ]; \
-then { yabai -m space --create; } && {yabai -m space --focus last; } fi
-alt - 6 : yabai -m space --focus 6 || if [ "$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[-1].index')" -ne "6" ]; \
-then { yabai -m space --create; } && {yabai -m space --focus last; } fi
-alt - 7 : yabai -m space --focus 7 || if [ "$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[-1].index')" -ne "7" ]; \
-then { yabai -m space --create; } && {yabai -m space --focus last; } fi
-alt - 8 : yabai -m space --focus 8 || if [ "$(yabai -m query --spaces | jq 'map(select(."has-focus" == true))[-1].index')" -ne "8" ]; \
-then { yabai -m space --create; } && {yabai -m space --focus last; } fi
-alt - 9 : yabai -m space --focus last
-alt - tab : yabai -m space --focus next || yabai -m space --focus first
-shift - tab : yabai -m space --focus prev || yabai -m space --focus last
+alt - z : yabai -m space --focus recent ; sh ${HOME}/.config/skhd/destroy.sh
+alt - 1 : sh ${HOME}/.config/skhd/focus.sh 1
+alt - 2 : sh ${HOME}/.config/skhd/focus.sh 2
+alt - 3 : sh ${HOME}/.config/skhd/focus.sh 3
+alt - 4 : sh ${HOME}/.config/skhd/focus.sh 4
+alt - 5 : sh ${HOME}/.config/skhd/focus.sh 5
+alt - 6 : sh ${HOME}/.config/skhd/focus.sh 6
+alt - 7 : sh ${HOME}/.config/skhd/focus.sh 7
+alt - 8 : sh ${HOME}/.config/skhd/focus.sh 8
+alt - 9 : sh ${HOME}/.config/skhd/focus.sh 9
+alt - tab : { yabai -m space --focus next || yabai -m space --focus first } && sh ${HOME}/.config/skhd/destroy.sh
+shift - tab : { yabai -m space --focus prev || yabai -m space --focus last } && sh ${HOME}/.config/skhd/destroy.sh
 
 # send window to desktop and follow focus
-shift + alt - 1 : yabai -m window --space first; yabai -m space --focus first
-shift + alt - 2 : { yabai -m window --space 2 && yabai -m space --focus 2 } || \
-  { yabai -m space --create && yabai -m window --space last && yabai -m space --focus last }
-shift + alt - 3 : { yabai -m window --space 3 && yabai -m space --focus 3 } || \
-  { yabai -m space --create && yabai -m window --space last && yabai -m space --focus last }
-shift + alt - 4 : { yabai -m window --space 4 && yabai -m space --focus 4 } || \
-  { yabai -m space --create && yabai -m window --space last && yabai -m space --focus last }
-shift + alt - 5 : { yabai -m window --space 5 && yabai -m space --focus 5 } || \
-  { yabai -m space --create && yabai -m window --space last && yabai -m space --focus last }
-shift + alt - 6 : { yabai -m window --space 6 && yabai -m space --focus 6 } || \
-  { yabai -m space --create && yabai -m window --space last && yabai -m space --focus last }
-shift + alt - 7 : { yabai -m window --space 7 && yabai -m space --focus 7 } || \
-  { yabai -m space --create && yabai -m window --space last && yabai -m space --focus last }
-shift + alt - 8 : { yabai -m window --space 8 && yabai -m space --focus 8 } || \
-  { yabai -m space --create && yabai -m window --space last && yabai -m space --focus last }
-shift + alt - 9 : yabai -m window --space last; yabai -m space --focus last
+shift + alt - 1 : sh ${HOME}/.config/skhd/send.sh 1
+shift + alt - 2 : sh ${HOME}/.config/skhd/send.sh 2
+shift + alt - 3 : sh ${HOME}/.config/skhd/send.sh 3
+shift + alt - 4 : sh ${HOME}/.config/skhd/send.sh 4
+shift + alt - 5 : sh ${HOME}/.config/skhd/send.sh 5
+shift + alt - 6 : sh ${HOME}/.config/skhd/send.sh 6
+shift + alt - 7 : sh ${HOME}/.config/skhd/send.sh 7
+shift + alt - 8 : sh ${HOME}/.config/skhd/send.sh 8
+shift + alt - 9 : sh ${HOME}/.config/skhd/send.sh 9
 
 # mirror
 alt - y : yabai -m space --mirror y-axis

@@ -16,7 +16,8 @@ git pull origin main
 とできる限り共通するように設定している．
 - [github](https://github.com/koekeishiya/skhd)
 
-## brew install
+## spaceman
+今どのスペースに居るかを表示する．
 ```
  brew install spaceman
 ```

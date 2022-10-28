@@ -9,11 +9,14 @@ git pull origin main
 ## yabai
 タイル型ウィンドウマネージャー．下記のskhdと組み合わせて使う．
 - [github](https://github.com/koekeishiya/yabai)
+
+## skhd
+ショートカットバインドツール．
+[linuxのi3](https://github.com/h-akira/linux-config)
+とできる限り共通するように設定している．
+- [github](https://github.com/koekeishiya/skhd)
+
+## brew install
 ```
  brew install spaceman
 ```
-## skhd
-ショートカットバインドツール．
-[linuxのi3](https://github.com/h-akira/mac-config)
-とできる限り共通するように設定している．
-- [github](https://github.com/koekeishiya/skhd)

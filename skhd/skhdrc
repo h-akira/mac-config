@@ -156,16 +156,16 @@ shift + ctrl - k : yabai -m window --move rel:0:-20
 shift + ctrl - l : yabai -m window --move rel:20:0
 
 # increase window size
-alt - y : yabai -m window --resize left:-20:0
-alt - u : yabai -m window --resize bottom:0:20
-alt - i : yabai -m window --resize right:0:-20
-alt - o : yabai -m window --resize top:0:-20
+alt - u : yabai -m window --resize left:-20:0
+alt - i : yabai -m window --resize bottom:0:20
+alt - o : yabai -m window --resize right:0:-20
+alt - p : yabai -m window --resize top:0:-20
 
 # decrease window size
-shift + alt - y : yabai -m window --resize left:20:0
-shift + alt - u : yabai -m window --resize bottom:0:-20
-shift + alt - i : yabai -m window --resize right:0:20
-shift + alt - o : yabai -m window --resize top:0:20
+shift + alt - u : yabai -m window --resize left:20:0
+shift + alt - i : yabai -m window --resize bottom:0:-20
+shift + alt - o : yabai -m window --resize right:0:20
+shift + alt - p : yabai -m window --resize top:0:20
 
 # toggle window zoom
 alt - f : yabai -m window --toggle zoom-fullscreen

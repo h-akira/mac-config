@@ -108,7 +108,7 @@ alt - left   : yabai -m window --grid 1:2:0:0:1:1
 alt - right   : yabai -m window --grid 1:2:1:1:0:0
 
 # create and deleat desktop
-shift + alt - c : yabai -m space --create
+shift + alt - c : yabai -m space --create ; yabai -m space --focus last
 shift + alt - d : sh ${HOME}/.config/skhd/destroy.sh
 
 # fast focus desktop

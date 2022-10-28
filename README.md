@@ -14,7 +14,13 @@ git pull origin main
 ショートカットバインドツール．
 [linuxのi3](https://github.com/h-akira/linux-config)
 とできる限り共通するように設定している．
+```
+brew install koekeishiya/formulae/skhd
+brew services start skhd
+```
 - [github](https://github.com/koekeishiya/skhd)
+
+
 
 ## spaceman
 今どのスペースに居るかを表示する．

@@ -14,4 +14,6 @@ git pull origin main
 ```
 ## skhd
 ショートカットバインドツール．
+[linuxのi3](https://github.com/h-akira/mac-config)
+とできる限り共通するように設定している．
 - [github](https://github.com/koekeishiya/skhd)

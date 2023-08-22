@@ -109,7 +109,7 @@ alt - right   : yabai -m window --grid 1:2:1:1:0:0
 
 # create and deleat desktop
 shift + alt - c : yabai -m space --create ; yabai -m space --focus last
-shift + alt - d : sh ${HOME}/.config/skhd/destroy.sh
+shift + alt - d : yabai -m space --destroy
 
 # fast focus desktop
 alt - z : yabai -m space --focus recent ; sh ${HOME}/.config/skhd/destroy.sh
